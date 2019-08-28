@@ -33,3 +33,5 @@ nosetests.xml
 # Complexity
 output/*.html
 output/*/index.html
+
+.idea/

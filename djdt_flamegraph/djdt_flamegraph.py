@@ -45,11 +45,6 @@ class FlamegraphPanel(Panel):
     template = 'djdt_flamegraph.html'
 
     @property
-    def enabled(self):
-        key = 'djdt' + self.panel_id
-        return self.toolbar.request.COOKIES.get(key, 'off') == 'on'
-
-    @property
     def content(self):
         ctx = {
             'flamegraph': flamegraph.stats_to_svg(self.sampler.get_stats())
